@@ -6,6 +6,7 @@
   @date  2020-11-21
 */
 
+--建议通过notepad++打开，菜单栏中选择sql效果更佳哟
 CREATE TABLE IF NOT EXISTS `students` (
 `id` INT(5) UNSIGNED AUTO_INCREMENT,
 `name` VARCHAR(10) DEFAULT 'Tom',
@@ -36,10 +37,6 @@ insert into students (`name`,`age`,`gender`,`stuid`) values ('bff4',14,'Female',
 insert into students (`name`,`age`,`gender`,`stuid`) values ('sds3',86,'Male','42043544');
 insert into students (`name`,`age`,`gender`,`stuid`) values ('nhj7',52,'Female','27406534');
 insert into students (`name`,`age`,`gender`,`stuid`) values ('nhj7',52,'Female',null);
-
-#蠕虫复制
-create table stu_info like students;
-insert into stu_info (`name`,`age`,`gender`,`idnumber`) values select (`name`,`age`,`gender`,`idnumber`) from students;
 
 select name , age+100 as `增加` from students;
 select name , age+100 as `add` from students;
